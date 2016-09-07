@@ -85,16 +85,16 @@ public class InfoBase {
         "+38(057)713-23-41"    
     };
     String [] departments = {
-        "AUTOMATICS AND INSTRUMENT",
-        "MECHANICAL ENGINEERING DEPARTMENT",
-        "ENGINEERING PHYSICS",
-        "COMPUTER SCIENCE AND MANAGEMENT",
-        "ECONOMIC DEPARTMENT",
-        "DEPARTMENT OF BUSINESS AND FINANCE",
-        "ELECTRIC MACHINE INDUSTRY",
-        "PHYSICO-TECHNICAL DEPARTMENT",
-        "TECHNOLOGY OF ORGANIC SUBSTANCES",
-        "INTEGRAL TECHNOLOGY AND APPLIED CHEMISTRY"    
+        "AI",
+        "ME",
+        "EPh",
+        "CSM",
+        "E",
+        "BF",
+        "EMI",
+        "PhT",
+        "TOS",
+        "ITACh"    
     };
     int [] yearOfStudyN = {
         1,

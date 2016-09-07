@@ -5,10 +5,6 @@
  */
 package com.uits.jv1608.learningclasses;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.*;
-
 /**
  *
  * @author Serebra
@@ -29,30 +25,14 @@ public class Student {
         id += 1;
         InfoBase s = new InfoBase();
         surname = s.surnames[((int)(Math.random()*10))];
-        
-        InfoBase n = new InfoBase();
-        name = n.names[((int)(Math.random()*10))];
-        
-        InfoBase p = new InfoBase();
-        patronymic = p.patronymics[((int)(Math.random()*10))];
-        
-        InfoBase date = new InfoBase();
-        dateOfBirthStudent = date.dateOfBirth[((int)(Math.random()*10))];
-        
-        InfoBase addr = new InfoBase();
-        address = addr.addresses[((int)(Math.random()*10))];
-        
-        InfoBase phN = new InfoBase();
-        phoneNumber = phN.phoneNumbers[((int)(Math.random()*10))];
-        
-        InfoBase dep = new InfoBase();
-        department = dep.departments[((int)(Math.random()*10))];
-        
-        InfoBase ySdy = new InfoBase();
-        yearOfStudy = ySdy.yearOfStudyN[((int)(Math.random()*10))];
-        
-        InfoBase grN = new InfoBase();
-        groupNumber = grN.groupNumbers[((int)(Math.random()*10))];    
+        name = s.names[((int)(Math.random()*10))];
+        patronymic = s.patronymics[((int)(Math.random()*10))];
+        dateOfBirthStudent = s.dateOfBirth[((int)(Math.random()*10))];
+        address = s.addresses[((int)(Math.random()*10))];
+        phoneNumber = s.phoneNumbers[((int)(Math.random()*10))];
+        department = s.departments[((int)(Math.random()*10))];
+        yearOfStudy = s.yearOfStudyN[((int)(Math.random()*10))];
+        groupNumber = s.groupNumbers[((int)(Math.random()*10))];    
     }
     
     @Override
@@ -135,123 +115,5 @@ public class Student {
 
     public void setGroupNumber(String groupNumber) {
         this.groupNumber = groupNumber;
-    }
-    
-    public void listOfStudentsOfChosenDepartment(Student arr[], String department){
-        for(Student x : arr){
-            if(Student.this.department.equals(department))
-                System.out.println(x);
-        }   
-    } 
-
-    public void printListOfStudentsFromAllDepartments(Student arr[]){
-        System.out.println("List of students from AUTOMATICS AND INSTRUMENT department:");
-        for(Student x : arr){
-            if(Student.this.department.equals("AUTOMATICS AND INSTRUMENT")){ 
-                System.out.println(x);
-            }
-        }
-        System.out.println("List of students from MECHANICAL ENGINEERING department:");
-        for(Student x : arr){
-            if(Student.this.department.equals("MECHANICAL ENGINEERING")){ 
-                System.out.println(x); 
-            }
-        }
-        System.out.println("List of students from ENGINEERING PHYSICS department:");
-        for(Student x : arr){
-            if(Student.this.department.equals("ENGINEERING PHYSICS")){
-                System.out.println(x); 
-            }
-        }
-        System.out.println("List of students from COMPUTER SCIENCE AND MANAGEMENT department:");
-        for(Student x : arr){
-            if(Student.this.department.equals("COMPUTER SCIENCE AND MANAGEMENT")){ 
-                System.out.println(x);
-            }
-        }
-        System.out.println("List of students from ECONOMIC department:");
-        for(Student x : arr){
-            if(Student.this.department.equals("ECONOMIC")){ 
-                System.out.println(x);
-            }
-        }
-        System.out.println("List of students from DEPARTMENT OF BUSINESS AND FINANCE department:");
-        for(Student x : arr){
-            if(Student.this.department.equals("DEPARTMENT OF BUSINESS AND FINANCE")){ 
-                System.out.println(x);
-            }
-        }
-        System.out.println("List of students from ELECTRIC MACHINE INDUSTRY department:");
-        for(Student x : arr){
-            if(Student.this.department.equals("ELECTRIC MACHINE INDUSTRY")){
-                System.out.println(x);
-            }
-        }
-        System.out.println("List of students from PHYSICO-TECHNICAL department:");
-        for(Student x : arr){
-            if(Student.this.department.equals("PHYSICO-TECHNICAL")){
-                System.out.println(x);
-            }
-        }
-        System.out.println("List of students from TECHNOLOGY OF ORGANIC SUBSTANCES department:");
-        for(Student x : arr){
-            if(Student.this.department.equals("TECHNOLOGY OF ORGANIC SUBSTANCES")){
-                System.out.println(x);
-            }
-        }
-        System.out.println("List of students from INTEGRAL TECHNOLOGY AND APPLIED CHEMISTRY department:");
-        for(Student x : arr){
-            if(Student.this.department.equals("INTEGRAL TECHNOLOGY AND APPLIED CHEMISTRY")){
-                System.out.println(x);
-            }
-        }
-    }    
-    
-    public void listOfStudentsOfAllTheYearsOfStudy(Student arr[]){
-        System.out.println("The first year of study:");
-        for(Student x : arr){
-            if(Student.this.yearOfStudy == 1) // нужно проверить строки на совпадение
-                System.out.println(x);// если стрки совадают, то печатаем студента    
-        }
-        System.out.println("The second year of study:");
-        for(Student x : arr){
-            if(Student.this.yearOfStudy == 2) // нужно проверить строки на совпадение
-                System.out.println(x);// если стрки совадают, то печатаем студента    
-        }
-        System.out.println("The third year of study:");
-        for(Student x : arr){
-            if(Student.this.yearOfStudy == 3) // нужно проверить строки на совпадение
-                System.out.println(x);// если стрки совадают, то печатаем студента    
-        }
-        System.out.println("The fourth year of study:");
-        for(Student x : arr){
-            if(Student.this.yearOfStudy == 4) // нужно проверить строки на совпадение
-                System.out.println(x);// если стрки совадают, то печатаем студента    
-        }
-        System.out.println("The fifth year of study:");
-        for(Student x : arr){
-            if(Student.this.yearOfStudy == 5) // нужно проверить строки на совпадение
-                System.out.println(x);// если стрки совадают, то печатаем студента    
-        }
-        System.out.println("The sixth year of study:");
-        for(Student x : arr){
-            if(Student.this.yearOfStudy == 6) // нужно проверить строки на совпадение
-                System.out.println(x);// если стрки совадают, то печатаем студента    
-        }
-    }
-    
-    public void listOfStudentsAfterDateOfBirth(Student arr[], String theDate) throws ParseException{
-        Date d = new SimpleDateFormat("dd.mm.yyyy").parse(theDate);
-        for(Student x : arr){
-            if(new SimpleDateFormat("dd.mm.yyyy").parse(Student.this.dateOfBirthStudent).after(d) )
-                System.out.println(x);
-        }
-    }
-    
-     public void listOfStudentsOfChosenGroup(Student arr[], String groupN){
-        for(Student x : arr){
-            if(Student.this.groupNumber.equals(groupN))
-                System.out.println(x);
-        }   
     }
 }
